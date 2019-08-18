@@ -1,0 +1,55 @@
+\documentclass{ayudantia}
+
+\title{Solución Ayudantía 1}
+\date{2019/08/13}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Dado \(p\) primo, demuestre que \(\sqrt{p}\) es irracional usando descenso infinito.
+          \begin{proof}
+              Asumamos que \(\sqrt{p}\) es racional, o sea, existen \(a,b\in\set{N}\)\footnote{\(\sqrt{p}\) es positivo, por lo que \(a,b\) también lo son} tales que \(\sqrt{p}=\frac{a}{b}\), se reescribe la ecuación de la siguiente forma:
+              \begin{equation}
+                  b^2p=a^2\label{eq1}
+              \end{equation}
+              Se nota que \(p\mid a^2\), por teorema visto en clase si \(p\mid a\cdot a\) entonces \(p\mid a\) o \(p\mid a\), por lo que \(a=pa_1\), donde \(a_1\in\set{N}\) y \(a_1<a\). Volviendo a reescribir la ecuación se tiene lo siguiente:
+              \begin{align*}
+                  b^2p           & =p^2a_1^2 \\
+                  \therefore b^2 & =a_1^2p
+              \end{align*}
+              Con eso, se ve que se puede usar el mismo argumento anterior, y con esto se tiene que \(p\mid b\), por lo que \(b=pb_1\), con \(b_1\in\set{N}\) y \(b_1<b\). Se reescribe la ecuación y se tiene lo siguiente:
+              \[
+                  b^2_1p=a_1^2
+              \]
+              Se puede ver que está es la misma ecuación que \eqref{eq1}, pero con distintas variables, por lo que se puede repetir el proceso para generar \(a_2,b_2\in\set{N}\) tales que \(b_2^2p=a_2^2\) y \(0<b_2<b_1<b,0<a_2<a_1<a\), como este proceso se puede repetir infinitamente, se tiene un cadena descendiente infinita de números enteros positivos, lo cual es una contradicción.
+          \end{proof}
+    \item Dado \((a,b)=1\) y \((a,c)=1\), demuestre que \((a,bc)=1\).
+          \begin{proof}
+            Sea \((a,bc)=k\), si \(k>1\), existe \(p\) primo tal que \(p\mid k\)\footnote{Se puede demostrar sin usar el Teorema Fundamental de la Aritmética, o usandolo directamente.}, luego se tiene que \(p\mid a\) y \(p\mid bc\), ya que \(k\mid a\) y \(k\mid bc\). Con esto se tiene que sea uno de los siguientes:
+            \begin{align*}
+                &(p\mid a\wedge p\mid b) &(p\mid a\wedge p\mid c)
+            \end{align*}
+            Con el primero se tiene que \(p\mid (a,b)\), por lo que \((a,b)>1\), lo que es una contradicción, análogamente con el segundo.
+          \end{proof}
+    \item Demuestre que \(a^p+b^p\) es divisible por \(p\) ssi \((a+b)^p\) es divisible por \(p\).
+          \begin{proof}
+            Se comienza viendo que \(p\mid\binom{p}{k}\) para \(0<k<p\), se recuerda la definición de primo\footnote{i.e. 
+            es un número natural mayor a \(1\) que no es la multiplicación de dos números naturales menores a este.} y se escribe lo siguiente
+            \[
+                \binom{p}{k}=\frac{p!}{(p-k)!k!}=p\frac{(p-1)!}{(p-k)!k!}
+            \]
+            Como \(p\) es primo, y \(k,p-k\) son menores a \(p\) se tiene que son coprimos, por lo que \(\frac{(p-1)!}{(p-k)!k!}\) es un entero, y entonces \(\binom{p}{k}\) es divisible por \(p\). Usando propiedades de divisibilidad\footnote{i.e. \(a\mid b,a\mid c\implies a\mid b+c\)}, se tiene que
+            \[
+                p\mid\sum_{k=1}^{p-1}\binom{p}{k}a^kb^{p-k}
+            \]
+            Para \(a,b\in\set{N}\). Con esto, se ve que \((a+b)^p=a^p+b^p+\sum_{k=1}^{p-1}\binom{p}{k}a^kb^{p-k}\), con lo que si \(p\mid a^p+b^p\) se tiene que \(p\mid(a+b)^p\) y vice-versa.
+          \end{proof}
+    \item Demuestre que dado \(p\) primo, \(p\mid b^2\) ssi \(p^2\mid b^2\). (\textit{Demuéstrelo sin el teorema fundamental de la aritmética})(Generalice a \(p\mid b^n\) ssi \(p^n\mid b^n\))
+          \begin{proof}
+            \underline{\(\implies\)}: Si \(p\mid b^2\), por una propiedad usada anteriormente se tiene que \(p\mid b\), con lo que \(p^2\mid b^2\)\footnote{Equivalentemente \(p^n\mid b^n\)}.\\
+            \underline{\(\impliedby\)}: Si \(p^2\mid b^2\), entonces \(p\mid p^2\) y por transitividad \(p\mid b^2\)\footnote{Equivalentemente \(p\mid b^n\)}. Con lo que se tiene lo pedido.
+          \end{proof}
+\end{enumerate}
+
+\end{document}
