@@ -1,0 +1,61 @@
+\documentclass{ayudantia}
+
+\title{Solución Ayudantía 4}
+\date{2019/08/27}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item \begin{enumerate}[label=\alph*)]
+        \item Se nota que \(18\mid 4x-7\), por lo que específicamente \(2\mid 4x-7\), y por ende \(2\mid -7\), pero eso es una contradicción.
+        \item \begin{align*}
+            10x&\equiv 5\mod 20\quad/\text{Se divide por \(5,20\)}\\
+            2x&\equiv 1\mod 4\quad/-1\\
+            2x-1&\equiv 0\mod 4\quad\text{Se nota que \(2x-1\) es impar, pero \(4\mid 2x-1\)}
+        \end{align*}
+        No tiene solución.
+        \item \begin{align*}
+            5(34x-24)&\equiv 22-4x\mod 76\\
+            170x-120&\equiv 22-4x\mod 76\quad/+4x+120\\
+            174x&\equiv 144\mod 76\quad\text{Reduciendo \(174\) y \(144\)}\\
+            22x&\equiv 68\mod 76\quad\text{Dividiendo por \((22,76)=2\)}\\
+            11x&\equiv 34\mod 38\quad/\cdot 7\\
+            77&\equiv 238\mod 38\quad\text{Reduciendo \(77\) y \(238\)}\\
+            x&\equiv 10\mod 38
+        \end{align*}
+        Con lo que se tiene una solución
+        \item \begin{align*}
+            25-x&\equiv 3(x+2)\mod 27\\
+            25-x&\equiv 3x+6\mod 27\quad/+x-6\\
+            19&\equiv 4x\mod 27\quad/\cdot 7\\
+            133&\equiv 28x\mod 27\quad\text{Reduciendo \(133\) y \(28\)}\\
+            25 &\equiv x\mod 27
+        \end{align*}
+        Juntando ambas se tiene \(x\equiv 808 \mod (27*38)\)
+    \end{enumerate}
+    \item Se nota que si \(a^{16}\equiv 1\mod 17\) para todo \(a\in\set{Z}_{17}\), se tiene lo pedido. Dado un \(a\) coprimo con \(17\), sean \(r_1,\dots,r_{16}\in\set{Z}_{17}\setminus\{0\}\), todos los números coprimos con \(17\), luego \(ar_1,\dots,ar_{16}\in\set{Z}_{17}\setminus\{0\}\) también son números coprimos con \(17\), por lo tanto se tiene la siguiente congruencia:
+    \[r_1\cdot r_2\cdot\dots\cdot r_{15}\cdot r_{16}\equiv ar_1\cdot ar_2\cdot\dots\cdot ar_{15}\cdot ar_{16}\mod 17\]
+    Reagrupando se ve lo siguiente:
+    \[r_1\cdot r_2\cdot\dots\cdot r_{15}\cdot r_{16}\equiv a^{16}\cdot\paren{r_1\cdot r_2\cdot\dots\cdot r_{15}\cdot r_{16}}\mod 17\]
+    Y como cada \(r_i\) es coprimo con \(17\) se tiene que \(a^{16}\equiv 1\mod 17\). Con esto se tiene lo pedido.
+    \item Como \((a,68)=(b,68)=1\), específicamente \((a,17)=(b,17)=1\), por lo que \(a^{16}\equiv b^{16}\mod 17\), o equivalentemente \(17\mid b^{16}-a^{16}\). Como \((a,68)=1\) específicamente se tiene \((a,2)=1\), por lo que \(a\equiv 1\mod 4\) o \(a\equiv 3\mod 4\), luego viendo cada caso:
+    \begin{align*}
+        a\equiv 1\mod 4&\implies a^2\equiv 1\mod 4\\
+        a\equiv 3\mod 4&\implies a^2\equiv 3^2\equiv 9\equiv 1\mod 4
+    \end{align*}
+    Por lo que si \((a,2)=1\) se tiene que \(a^2\equiv  1\mod 4\), más aún \(a^{16}\equiv 1\mod 4\). Como esto solo dependía de \((a,2)=1\), tambien se aplica a \(b\), por lo que \(a^{16}\equiv b^{16}\equiv 1\mod 4\), por lo que \(4\mid b^{16}-a^{16}\). Juntando esto con lo anterior se tiene que \(68\mid b^{16}-a^{16}\).
+    \item Se generan las siguientes particiones de \(\set{Z}_p\setminus\{0\}\):
+    \[x,x^{-1}\]
+    Donde \(x^{-1}\) es el inverso modular de \(x\)\footnote{\(x\cdot x^{-1}\equiv 1\mod p\)}, para que esto sea una partición se necesita que en cada subconjunto solo estén esos elementos, para eso es suficiente ver que cada elemento tiene un único inverso y es el único inverso de su inverso\footnote{Aquí \(x^{-1}\) es el único elemento en \(\set{Z}_p\) tal que \(x\cdot x^{-1}\equiv 1\mod p\), similarmente \(x\) es el único que cumple lo mismo para \(x^{-1}\)}. Con esto se tiene que cada partición esta bien definida y es a lo más de tamaño dos, las únicas particiones de tamaño menor cumplen que son su propio inverso:
+    \begin{align*}
+        x^2&\equiv 1\mod p\quad/-1\\
+        x^2-1&\equiv 0\mod p\\
+        (x-1)(x+1)\equiv 0\mod p
+    \end{align*}
+    Como \(p\) es primo se tiene que \(p\mid (x-1)\) o \(p\mid (x+1)\), por lo que \(x\equiv\pm 1\mod p\). Esto implica que las únicas particiones de tamaño 1 son \(\{1\},\{-1\}\). Usando esta información se agrupan los elementos del producto \((p-1)!\) cada uno con su inverso, exceptuando \(p-1\) y \(1\), y se llega a la siguiente expresión:
+    \[(p-1)!\equiv (p-1)\cdot1\equiv -1\mod p\]
+    Demostrando lo pedido.
+\end{enumerate}
+
+\end{document}

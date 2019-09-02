@@ -1,0 +1,63 @@
+\documentclass{ayudantia}
+
+\title{Solución Ayudantía 3}
+\date{2019/08/22}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Si \(a\equiv b\mod k\), entonces \(k\mid a-b\), por lo que \(k\mid (a-b)\cdot\paren{\sum_{i=0}^{n-1}a^ib^{b-1-i}}=(a^n-b^n)\) por lo que \(a^n\equiv b^n\mod k\)
+    \item Solución para cada sistema de congruencias:
+    \begin{enumerate}
+        \item \begin{align*}
+            3x&\equiv 2\mod 11 \quad/\cdot 4\\
+            12x&\equiv 8\mod 11 \quad/\text{Reduciendo \(12\)}\\
+            x&\equiv 8\mod 11\\
+            2(x-3)&\equiv 8\mod 11\\
+            2x-6&\equiv 8\mod 11 \quad/+6\\
+            2x&\equiv 14\mod 11 \quad/\cdot6\\
+            12x&\equiv 84\mod 11 \quad/\text{Reduciendo \(12\) y \(84\)}\\
+            x&\equiv 7\mod 11
+        \end{align*}
+        Ahora \(x\) no puede ser congruente a \(7\) y a \(8\) módulo \(11\), por lo que no hay solución.
+        \item \begin{align*}
+            5x-1&\equiv 3(4-x)\mod 8\\
+            5x-1&\equiv 12-3x\mod 8\quad/+3x+1\\
+            8x&\equiv 13\mod 8\quad/\text{Se reducen \(8\) y \(13\)}\\
+            0&\equiv 5\mod 8
+        \end{align*}
+        Con esto se tiene una contradicción, no hay solución para el sistema.
+        \item \begin{align*}
+            2x+3&\equiv 4(3-2x)\mod 9\\
+            2x+3&\equiv 12-8x\mod 9\quad/+8x-3\\
+            10x&\equiv 9\mod 9\quad\text{Reduciendo \(10\) y \(9\)}\\
+            x\equiv 0\mod 9
+        \end{align*}
+        Por lo que hay solución.
+        \item \begin{align*}
+            7-x&\equiv 5(6+2x)\mod 15\\
+            7-x&\equiv 30+10x\mod 15\quad/+x\\
+            7&\equiv 30+11x\mod 15\quad\text{Reduciendo \(30\)}\\
+            7&\equiv 11x\mod 15\quad/\cdot -4\\
+            -28&\equiv -44x\mod 15\quad\text{Reduciendo \(-28\) y \(-44\)}\\
+            2&\equiv x\mod 15
+        \end{align*}
+        Con lo que encontró la solución.
+        \item \begin{align*}
+            4x&\equiv 3(5-x)\mod 8\\
+            4x&\equiv 15-3x\mod 8\quad/+3x\\
+            7x&\equiv 15\mod 8\quad\text{Reduciendo \(15\)}\\
+            7x&\equiv 7\mod 8\quad/\cdot-1\\
+            -7x&\equiv -7\mod 8\quad\text{Reduciendo \(-7\)}\\
+            x&\equiv 1\mod 8\\
+            6(2-x)&\equiv 5+x\mod 8\\
+            12-6x&\equiv  5+x\mod 8\quad/-5+6x\\
+            7&\equiv 7x\mod 8\quad\text{Se recuerda el congruencia anterior}\\
+            x&\equiv 1\mod 8
+        \end{align*}
+        Se tiene la solución.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

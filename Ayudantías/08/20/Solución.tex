@@ -1,0 +1,26 @@
+\documentclass{ayudantia}
+
+\title{Solución Ayudantía 2}
+\date{2019/08/20}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item \(\impliedby\) es clara. Para \(\implies\), sea \(B=\{b\in\set{N}:\exists a\in\set{N} (a\nmid b\wedge a^2\mid b^2)\}\). Si es que \(B\) es vacío se tiene lo pedido, en otro caso se usa buen orden para tomar \(b_0\) el elemento mínimo de \(B\). Luego existe \(a_0\in\set{N}\) tq \(a_0\nmid b_0\) y \(a_0^2\mid b_0^2\). Se sabe que existe \(p\) primo tq \(p\mid a_0\), por lo que \(p\mid b_0^2\) y como \(p\) es primo se tiene que \(p\mid b_0\), y por ende \(b_0=pb_1\) y \(a_0=pb_1\). De esto se ve que \(p^2a_1^2\mid p^2b_1^2\), por lo que \(a_1^2\mid b_1^2\), como \(b_1<b_0\) se tiene que \(a_1\mid b_1\), por lo que \(pa_1\mid pb_1\), pero es equivalente a que \(a_0\mid b_0\), por lo que \(B\) es vacío. Y se tiene lo pedido.
+    \item Por contradicción, sea \((a+b,ab)=k>1\), entonces existe \(p\) primo que divide \(k\), por lo que \(p\mid ab\) y \(p\mid a+b\), dado que \(p\) es primo lo anterior se reescribe de la siguiente manera:
+    \[\paren{p\mid a+b\wedge p\mid b}\vee\paren{p\mid a+b\wedge p\mid a}\]
+    Con esto se tiene que \(p\mid a\) y \(p\mid b\), por lo que \(p\mid (a,b)=1\), una contradicción. Con lo que se tiene lo pedido.
+    \item Para cada uno se usa congruencias modulares:
+    \begin{enumerate}
+        \item \(a_n\dots a_0\equiv\sum_{i=0}^na_i\cdot 10^i\equiv a_0\mod 2\)
+        \item \(a_n\dots a_0\equiv\sum_{i=0}^na_i\cdot 10^i\equiv\sum_{i=0}^na_i\mod 3\)
+        \item \(a_n\dots a_0\equiv\sum_{i=0}^na_i\cdot 10^i\equiv a_1\cdot 10+a_0\equiv 2a_1+a_0\mod 4\) (Para \(i>1\) se tiene que \(4\mid 10^i\))
+        \item \(a_n\dots a_0\equiv\sum_{i=0}^na_i\cdot 10^i\equiv a_0\mod 5\)
+    \end{enumerate}
+    \item Se describe el siguiente algoritmo:\\
+    Para cada número \(n\) se revisa si es primo, si lo es se enumera, si no se continua al siguiente número. Para determinar si un número \(n\) es primo, se ven todos los números mayores a \(1\) y menores a \(n\), si alguno divide a \(n\), entonces \(n\) no es primo, en otro caso \(n\) es primo.\\
+    Demostración de su correctitud: Sea \(p\) primo no enumerado por el algoritmo, entonces por construcción el algoritmo encontró un divisor de \(p\), por lo que \(p\) no es primo. Sea \(n\) un número no primo enumerado por el algoritmo, por construcción no es divisible por números menores a sí mismo, por lo que por definición es primo.
+\end{enumerate}
+
+\end{document}
