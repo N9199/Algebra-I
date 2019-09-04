@@ -1,0 +1,67 @@
+\documentclass{ayudantia}
+
+\usepackage{multicol}
+
+\title{Solución Ayudantía 5}
+\date{2019/08/29}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item \begin{align*}
+            3x&\equiv 7\mod 10\quad/\cdot 7\\
+            21x&\equiv 49\mod 10\quad\text{Reduciendo \(21\) y \(49\)}\\
+            x&\equiv 9\mod 10\\
+            x&\equiv 5y\mod 6\quad/\cdot 5\\
+            5x&\equiv 25y\mod 6\quad\text{Reduciendo \(25\)}\\
+            5x&\equiv y\mod 6
+        \end{align*}
+        Entonces se tiene que \(y=6n+5x\) y \(x=9+10k\), por lo que se tienen todas las soluciones.
+        \item Usando el teorema chino del resto se tiene lo siguiente:
+        \begin{equation*}
+            x\equiv 2\cdot\frac{M}3\cdot\paren{\frac{M}3}_3^{-1}+5\cdot\frac{M}7\cdot\paren{\frac{M}7}_7^{-1}+6\cdot\frac{M}8\cdot\paren{\frac{M}8}_8^{-1}\mod M
+        \end{equation*}
+        Donde \(M=3\cdot7\cdot8\) y \(\paren{\frac{M}n}_n^{-1}\) es un entero tal que \( \paren{\frac{M}n}\cdot\paren{\frac{M}n}_n^{-1}\equiv 1\mod n\). Se ven los valores:
+        \begin{align*}
+            7\cdot 8&\equiv 2\mod 3\\
+            7\cdot 8\cdot 2&\equiv 1\mod 3
+        \end{align*}
+        Por lo que \(\paren{\frac{M}3}_3^{-1}=2\)
+        \begin{align*}
+            3\cdot 8&\equiv 3\mod 7\\
+            3\cdot 8\cdot 5&\equiv 1\mod 7
+        \end{align*}
+        Por lo que \(\paren{\frac{M}7}a_7^{-1}=5\)
+        \begin{align*}
+            3\cdot 7&\equiv 5\mod 8\\
+            3\cdot7\cdot 5&\equiv 1\mod 8
+        \end{align*}
+        Por lo que \(\paren{\frac{M}8}_8^{-1}=5\). Con lo que se puede calcular \(x\).
+        \item Se reescriben las congruencias de la siguiente forma:
+        \begin{align*}
+            &x\equiv-8\cdot (4y-6)\mod 25 &x\equiv-16\cdot(23y-8)\mod 49
+        \end{align*}
+        Ahora se juntan ambos cosas y se usa el teorema chino del resto:
+        \begin{equation*}
+            x\equiv -8\cdot(4y-6)\cdot 49\cdot (-1)-16\cdot(23y-8)\cdot 25\cdot2\mod (25\cdot 49)
+        \end{equation*}
+        Simplificando la congruencia anterior se tienen todas las soluciones.
+    \end{enumerate}
+    \item Se recuerda que \(\exists n,k\in\set{Z}: an+bk=(a,b)\), por lo que si \(x\) tiene inverso modular se tiene lo pedido. Como \(x^a\equiv 1\mod m\) entonces \(x\cdot x^{a-1}\equiv 1\mod m\), por lo que \(x\) tiene inverso modular. Ahora \(x^a\equiv 1\mod m\) por lo que \(x^{an}\equiv 1\mod m\), similarmente \(x^{bk}\equiv 1\mod m\), combinando ambos se tiene que \(1\equiv x^{an+bk}\equiv x^{a,b}\mod m\).
+    \item Se tiene que \(a\mid x-y\) y \(b\mid x-y\), por lo que escribiendo la descomposición prima de \(a\) y de \(b\) de las siguientes maneras:
+    \begin{align*}
+        &a=p_1^{\alpha_1}\cdot\ldots\cdot p_n^{\alpha_n} &b=p_1^{\beta_1}\cdot\ldots\cdot p_n^{\beta_n}
+    \end{align*}
+    Donde los \(p_i\) están ordenados y \(\alpha_i,\beta_i\geq0\)\footnote{Esto garantiza que las factorizaciones de \(a\) y de \(b\) sean faciles de comparar.}. Luego se ve que:
+    \begin{equation*}
+        \mcm(a,b)=p_1^{\max(\alpha_1,\beta_1)}\cdot\ldots\cdot p_n^{\max(\alpha_n,\beta_n)}
+    \end{equation*}
+    Por lo que es suficiente que cada \(p_i^{\max(\alpha_i,\beta_i)}\) dividan \(x-y\) para que \(\mcm(a,b)\mid x-y\). Ahora, para un \(i\) fijo se tiene que o \(\alpha_i\geq\beta_i\) con lo que se nota que \(p_i^{\alpha_i}\mid x-y\), o \(\alpha_i<\beta_i\)  con lo que se nota que \(p_i^{\beta_i}\mid x-y\), como en ambos casos \(p_i^{\max(\alpha_i,\beta_i)}\mid x-y\) se tiene lo pedido. Por lo que \(x\equiv y\mod\mcm(a,b)\)
+    \item Sean \(a=4\), \(b=6\), \(x=0\) e \(y=12\), se tiene \(12\equiv 0\mod 4\) y \(12\equiv 0\mod 6\), pero no se tiene que \(0\equiv 12\mod 24\)
+    \item Se recuerda que \(\sum_{i=1}^ni=\frac{n(n+1)}2\) por lo que el problema es equivalente a \(n(n+1)=2\cdot 10^k=2^{k+1}\cdot 5^k\), como \((n,n+1)=1\) se tiene que \(n=5^k\) y \(n+1=2^{k+1}\), o \(n+1=5^k\) y \(n=2^{k+1}\), por lo que el problema es ver para cuales \(k\) se tiene \(5^k=2^{k+1}+1\) o \(5^k+1=2^{k+1}\). Y como \(5^k\) crece más rápido que \(2^{k+1}\), esto tiene a lo más dos soluciones que se pueden encontrar verificando casos: \(k=1\implies 5^1=2^2+1\). Por lo que para \(k=1\) y \(n=4\) se tiene lo pedido.
+\end{enumerate}
+
+\end{document}
