@@ -1,0 +1,26 @@
+\documentclass{ayudantia}
+
+\title{Ayudantía 10}
+\date{2019/10/08}
+\author{Nicholas Mc-Donnell}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+Sea \(p(x)\in\set{Q}[x]\) mónico se define un ideal principal \(\paren{p(x)}=\{p(x)\cdot q(x):q(x)\in\set{Q}[x]\}\)\footnote{\(q(x)\) puede ser constante}, similarmente sean \(q(x),p(x)\in\set{Q}[x]\) mónicos se define un ideal generado por dos elementos \(\paren{q(x),p(x)}=\{p(x)\cdot a(x)+q(x)\cdot b(x):a(x),b(x)\in\set{Q}[x]\}\).
+\begin{enumerate}
+    \item Dado \(p(x),q(x)\in\set{Q}[x]\) mónicos demuestre las siguientes propiedades de \(\paren{p(x)}\) y de \(\paren{p(x),q(x)}\):
+    \begin{enumerate}[label=(\alph*)]
+        \item Sean \(r(x),s(x)\in\paren{p(x)}\) entonces \(r(x)+r(s)\in\paren{p(x)}\) (equivalentemente para \(\paren{p(x),q(x)}\)).
+        \item Sea \(r(x)\in\set{Q}[x]\) y \(s(x)\in\paren{p(x)}\) entonces \(r(x)\cdot s(x)\in\paren{p(x)}\) (equivalentemente para \(\paren{p(x),q(x)}\)).
+    \end{enumerate}
+    \item 
+    \begin{enumerate}[label=(\alph*)]
+        \item Dado \(p(x),q(x)\in\set{Q}[x]\) mónicos tal que \(p(x)\mid q(x)\) demuestre que \(\paren{q(x)}\subseteq\paren{p(x)}\). 
+        \item Use (a) esto para demostrar que sí \(p(x)\) es irreducible, no existe \(q(x)\in\set{Q}[x]\) tal que \(\paren{p(x)}\subseteq\paren{q(x)}\), si \(\paren{p(x)}\) cumple esta última condición se llama ideal principal maximal.
+        \item Sea \(p(x)\in\set{C}[x]\) mónico, se define \(\paren{p(x)}\) de forma equivalente, usando lo anterior demuestre que los únicos ideales principales maximales en \(\set{C}[x]\) son de la forma \(\paren{x-a}\) con \(a\in\set{C}\). 
+        \item Similarmente sea \(p(x)\in\set{R}[x]\) mónico se define \(\paren{p(x)}\) de forma equivalente, demuestre que los únicos ideales principales maximales en \(\set{R}[x]\) son de la forma \(\paren{p(x)}\) donde \(\deg(p)\leq 2\).
+    \end{enumerate}
+    \item Use el algoritmo de Euclides para polinomios para demostrar que dado \(p,q\in\set{Q}[x]\) existen \(u,v\in\set{Q}[x]\) tales que \(p\cdot u+q\cdot v=\gcd(p,q)\). Use esto para demostrar que dado \(p(x),q(x)\in\set{Q}[x]\) mónicos coprimos, entonces \(\paren{p(x),q(x)}=\set{Q}[x]\). Use lo anterior para demostrar que dado \(p(x)\in\set{Q}[x]\) irreducible mónico, todo polinomio \(q(x)\in\set{Q}[x]\) se puede escribir de la siguiente forma \(q(x)=r(x)+s(x)\) con \(r(x)\in\paren{p(x)}\) y \(s(x)\in\set{Q}[x]\setminus\paren{p(x)}\cup\{0\}\).
+\end{enumerate}
+\end{document}
