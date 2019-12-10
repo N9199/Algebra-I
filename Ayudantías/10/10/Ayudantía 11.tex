@@ -1,0 +1,45 @@
+\documentclass{ayudantia}
+
+\usepackage{multicol}
+
+\title{Ayudantía 11}
+\date{2019/10/10}
+\author{Nicholas Mc-Donnell}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item[0)] Escriba la definición de Anillo
+\end{itemize}
+\begin{enumerate}
+    \item Demuestre que los siguientes conjuntos son anillos con las operaciones usuales:
+    \begin{multicols}{4}
+        \begin{enumerate}[label=(\alph*)]
+            \item \(\set{Z}\)
+            \item \(\set{Q}\)
+            \item \(\set{R}\)
+            \item \(\set{C}\)
+            \item \(\set{Z}_n\)
+            \item \(\set{Z}[x]\)
+            \item \(\set{Q}[x]\)
+            \item \(\set{R}[x]\)
+            \item \(\set{C}[x]\)
+            \item \(\set{Z}_n[x]\)
+            \item Los pares
+            \item \(\{0\}\)
+        \end{enumerate}
+    \end{multicols}
+    \item Demuestre que dado un anillo \(R\), \(R[x]\) los polinomios con coeficientes en \(R\) es un anillo.
+    \item Dado dos anillos \(R\) y \(S\), se definen las siguientes operaciones:
+    \begin{align*}
+        \cdot:&(R\times S)\times(R\times S)\rightarrow R\times S\\
+        &(r_1,s_1)\cdot(r_2,s_2)\mapsto(r_1\cdot r_2,s_1\cdot s_2)\\
+        +:&(R\times S)\times(R\times S)\rightarrow R\times S\\
+        &(r_1,s_1)+(r_2,s_2)\mapsto(r_1+r_2,s_1+s_2)
+    \end{align*}
+    Demuestre que \(R\times S\) es un anillo con esas operaciones.
+    \item Sea \(S\) un conjunto, demuestre que \((P(S),\Delta,\cap,\emptyset)\)\footnote{\(\Delta\) es la diferencia simetrica y se toma como la suma, \(\cap\) es la intersección y se toma como la multiplicación} es un anillo.
+    \item Sea \(S\) un conjunto y \(R\) un anillo, demuestre que el conjunto de funciones de \(S\) a \(R\) es un anillo con la suma punto a punto y la multiplicación punto a punto.
+\end{enumerate}
+\end{document}

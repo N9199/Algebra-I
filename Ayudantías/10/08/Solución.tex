@@ -1,0 +1,15 @@
+\documentclass{ayudantia}
+
+\title{Solución Ayudantía 10}
+\date{2019/10/08}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item[3)] Sea \(p(x)\in\set{Q}[x]\), ahora por inducción en el grado de un polinomio \(q(x)\in\set{X}\). Si \(\deg(q)=0\) entonces \(\gcd(p,q)=p=p\cdot 1+q\cdot 0\). Se asume que para todo \(q\) tal que \(\deg(q)<k\) se tiene que \(\exists a,b\in\set{Q}[x]\) tal que \(\gcd(p,q)=p\cdot a+q\cdot q\). Luego, sea \(q\) de grado \(k\), por algoritmo de la división existen \(r,s\in\set{Q}[x]\) tal que \(p=qs+r\) donde \(\deg(r)<\deg(q)\), se nota que \(\gcd(p,q)=\gcd(p,r)\). Como \(\deg(r)<\deg(q)=k\) existen \(a,b\in\set{Q}[x]\) tal que \(ap+br=\gcd(p,r)=\gcd(p,q)\), usando que \(r=p-qs\) se tiene que \(\gcd(p,q)=(a+b)p+(-bs)q\), con lo que se tiene lo pedido.
+    Para la segunda parte, si \(p,q\) coprimos entonces \(\exists a,b\in\set{Q}[x]\) tal que \(ap+bq=1\), por lo que \(1\in(p,q)\subseteq\set{Q}[x]\), sea \(r\in\set{Q}[x]\), como \(1\in(p,q)\) y por propiedad 1b) se tiene que \(r\cdot 1\in (p,q)\), por lo que \(\set{Q}[x]=(p,q)\).
+    Para la tercera parte, dado \(p\) irreducible mónico, existe \(q\notin(p)\)\footnote{Si no existiera inmediatamente se tiene lo pedido, tomando \(s=0\)}. Luego \(\gcd(p,q)=1\), por lo que \((p,q)=\set{Q}[x]\), por lo que todo elemento \(r\in\set{Q}[x]\) se puede escribir de la siguiente forma \(r=ap+bq\), se nota que \(ap\in(p)\), si \(bq\in(p)\) se toma \(s=0\) y se tiene lo pedido, si no, se toma \(s=bq\) y se tiene lo pedido. Con esto se tiene lo pedido.
+\end{itemize}
+
+\end{document}

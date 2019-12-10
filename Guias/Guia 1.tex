@@ -1,0 +1,54 @@
+\documentclass{ayudantia}
+
+\usepackage{multicol}
+
+\title{Guía 1}
+\date{2019/10/15}
+\author{Nicholas Mc-Donnell}
+\course{Álgebra I - MAT2227}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item Demuestre que los siguientes conjuntos son subanillos de \(M_2(\set{C})\)
+    \begin{multicols}{2}
+        \begin{enumerate}[label=(\alph*)]
+            \item \(\bracket{\begin{pmatrix}
+                a&b\\0&a
+            \end{pmatrix}:a,b\in\set{C}}\)
+            \item \(\bracket{\begin{pmatrix}
+                a&0\\0&b
+            \end{pmatrix}:a,b\in\set{Q}}\)
+            \item \(\bracket{\begin{pmatrix}
+                a&b\\0&a
+            \end{pmatrix}:a,b\in\set{Z}}\)
+            \item \(\bracket{\begin{pmatrix}
+                a&b\\0&c
+            \end{pmatrix}:a,b,c\in\set{R}}\)
+        \end{enumerate}
+    \end{multicols}
+    \item Encuentre todos los subanillos de los siguientes conjuntos, ¿cuáles de estos son ideales?
+    \begin{multicols}{4}
+        \begin{enumerate}[label=(\alph*)]
+            \item \(\set{Z}_6\)
+            \item \(\set{Z}_7\)
+            \item \(\set{Z}_9\)
+            \item \(\set{Z}_p\) con \(p\) primo
+            \item \(\set{Z}\)
+        \end{enumerate}
+    \end{multicols}
+    \item Encuentre el menor subanillo de \(\set{Q}\) que contiene a \(\frac12\), similarmente encuentre el menor subanillo de \(\set{C}\) que contiene a \(i\) y a \(\pi\).
+    \item Encuentre un anillo no unitario de 23 elementos. Encuentre un anillo unitario de 23 elementos.
+    \item En \(\set{Q}[x]\) demuestre que \(\paren{p}\cap\paren{q}=\paren{\mcm(p,q)}\).
+    \item Sean \(I,J\) ideales de un anillo unitario \(R\):
+    \begin{enumerate}
+        \item Demuestre que \(I\cap J\) es un ideal.
+        \item Demuestre que \(I+J=\{a+b:a\in I, b\in J\}\) es un ideal.
+    \end{enumerate}
+    \item Demuestre que \(R\) un anillo unitario es un dominio de integridad ssi para todo \(a,b,c\in R\) con \(a\neq0\) si \(ab=ac\) se tiene que \(b=c\).
+    \item Sea \(I\) un ideal, demuestre que \(r(I)=\{r\in R:\forall x\in I\quad rx=0\}\) es un ideal.
+    \item Sea \(C[0,1]\) el anillo de funciones reales continuas sobre \([0,1]\), demuestre que \(I=\{f\in C[0,1]:f(\frac1\pi)=0\}\) es un ideal.
+    \item Sean \(I\subseteq J\) ideales del anillo unitario \(R\), demuestre que \(J/I=\{x+I:x\in J\}\) es un ideal de \(R/I\).
+    \item Sea \(R\) un anillo y \(S\) un conjunto, demuestre que las funciones de \(S\) a \(R\) son un anillo con la suma punto a punto y la multiplicación punto a punto.
+\end{enumerate}
+\end{document}
